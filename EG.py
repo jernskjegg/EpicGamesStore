@@ -30,8 +30,8 @@ imageURLs = []
 if takeDate < timeNowForm:
     try:
         for i in markPos :
-            games.append(data["data"]["Catalog"]["searchStore"]["elements"][i].g
-            imageURLs.append(data["data"]["Catalog"]["searchStore"]["elements"][
+            games.append(data["data"]["Catalog"]["searchStore"]["elements"][i].get("title"))
+            imageURLs.append(data["data"]["Catalog"]["searchStore"]["elements"][i]["keyImages"][1].get("url"))
     except IndexError:
         pass
 else:
